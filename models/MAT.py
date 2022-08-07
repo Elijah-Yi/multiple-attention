@@ -300,7 +300,7 @@ class MAT(nn.Module):
                 with torch.no_grad():
                     Xaug,index=AG.agda(x,loss_pack['attention_maps'])
                 #self.eval()
-                loss_pack2=self.train_batch(Xaug,y,jump_aux=False)
+                    loss_pack2=self.train_batch(Xaug,y,jump_aux=False)
                 #self.train()
                 loss_pack['AGDA_ensemble_loss']=loss_pack2['ensemble_loss']
                 loss_pack['AGDA_aux_loss']=loss_pack2['aux_loss']
